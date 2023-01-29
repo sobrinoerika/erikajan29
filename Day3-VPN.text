@@ -1,0 +1,55 @@
+TASK 5: tunneling VPN:
+
+@VPNJapan
+config T
+no logging console
+no ip domain-lookup
+int gi 1
+ip add dhcp
+no shut
+int gi 2
+ip add dhcp
+no shut
+int gi 3
+ip add 10.10.10.1 255.255.255.0
+no shut
+
+@VPNPHP
+config T
+no logging console
+no ip domain-lookup
+int gi 1
+ip add dhcp
+no shut
+int gi 2
+ip add dhcp
+no shut
+int gi 3
+ip add 10.20.20.1 255.255.255.0
+no shut
+
+
+TASK 6: LALABAS SA EXAM NYO
+How to configure SSHv2 or SecureShell
+Both VPNJapan and VPNPHP
+config T
+ip domain-name rivanit.com
+crypto key generate rsa
+ip ssh version 2
+
+Requiremnet for VPN
+1. Hash (protect original data) - sha256/sha1/md5
+2. Encyption (hide the data to anybody)
+    AES - Advance Emcryption Standard
+    DES - Digital enc Standard
+    RSA - rivest, shamir, adelman
+    IPSEC - 
+3. Tunnel ( hide your IP address)
+    PPTP, L2TP, GRE, IPSEC
+
+HOW TO CONFIGURE SITE TO SITE VPN from JAPAN-PH
+https://
+
+TASK 7: Fundamentals of Cisco Network Security
+*nmap -sP 10.3.3.0/24
+*nmap -Pnv 10.3.3.120
